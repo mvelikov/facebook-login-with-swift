@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, FBLoginViewDelegate {
 
+    var fbUser : FBGraphUser?
+    
     @IBOutlet var fbLoginView : FBLoginView!
     
     override func viewDidLoad() {
@@ -23,11 +25,12 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     
     func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
         println("User Logged In")
-        println("This is where you perform a segue.")
     }
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
         println("User Name: \(user.name)")
+        fbUser = user
+        performSegueWithIdentifier("showUserDetails", sender: fbLoginView)
     }
     
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
@@ -43,6 +46,12 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if sender as FBLoginView == fbLoginView {
 
+            let destinationController: UserDetailsViewController = segue.destinationViewController as UserDetailsViewController
+            destinationController.userName = fbUser?.name
+        }
+    }
 }
 
