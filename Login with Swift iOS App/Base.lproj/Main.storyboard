@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -44,7 +43,7 @@
         <!--User Details View Controller-->
         <scene sceneID="RW3-QC-gHy">
             <objects>
-                <viewController id="70V-E7-P0J" customClass="UserDetailsViewController" customModule="Login_with_Swift_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userDetailsView" id="70V-E7-P0J" customClass="UserDetailsViewController" customModule="Login_with_Swift_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KEY-t5-M1h"/>
                         <viewControllerLayoutGuide type="bottom" id="QaN-rD-z74"/>
@@ -53,41 +52,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EpO-rS-52K">
-                                <rect key="frame" x="16" y="28" width="568" height="379"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="228-4e-yY2">
+                                <rect key="frame" x="235" y="144" width="131" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyi-fF-0R7">
+                                        <rect key="frame" x="81" y="38" width="42" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLg-U8-AmQ">
+                                        <rect key="frame" x="20" y="40" width="44" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="EpO-rS-52K" secondAttribute="height" multiplier="3:2" id="lqY-Yw-SDY"/>
+                                    <constraint firstItem="oLg-U8-AmQ" firstAttribute="leading" secondItem="228-4e-yY2" secondAttribute="leading" constant="20" id="4bz-YW-mhv"/>
+                                    <constraint firstItem="oLg-U8-AmQ" firstAttribute="top" secondItem="228-4e-yY2" secondAttribute="top" constant="40" id="Ete-Sl-9IX"/>
+                                    <constraint firstAttribute="bottom" secondItem="oLg-U8-AmQ" secondAttribute="bottom" constant="39" id="IZQ-YK-oBh"/>
+                                    <constraint firstAttribute="trailing" secondItem="oyi-fF-0R7" secondAttribute="trailing" constant="8" id="KS2-tR-GRW"/>
+                                    <constraint firstItem="oyi-fF-0R7" firstAttribute="leading" secondItem="oLg-U8-AmQ" secondAttribute="trailing" constant="17" id="TDX-7h-5K0"/>
+                                    <constraint firstAttribute="bottom" secondItem="oyi-fF-0R7" secondAttribute="bottom" constant="39" id="fU3-Y5-rHt"/>
+                                    <constraint firstItem="oyi-fF-0R7" firstAttribute="top" secondItem="228-4e-yY2" secondAttribute="top" constant="38" id="gcm-N0-PEk"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyi-fF-0R7">
-                                <rect key="frame" x="16" y="415" width="568" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="EpO-rS-52K" secondAttribute="centerX" id="4uV-pb-3pI"/>
-                            <constraint firstAttribute="centerY" secondItem="EpO-rS-52K" secondAttribute="centerY" constant="112" id="FPB-dZ-Uc6"/>
-                            <constraint firstItem="EpO-rS-52K" firstAttribute="top" secondItem="KEY-t5-M1h" secondAttribute="bottom" constant="8" id="JDP-9x-j2z"/>
-                            <constraint firstAttribute="centerX" secondItem="oyi-fF-0R7" secondAttribute="centerX" id="XVn-uX-49c"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EpO-rS-52K" secondAttribute="trailing" id="aYX-ly-tOE"/>
-                            <constraint firstItem="oyi-fF-0R7" firstAttribute="leading" secondItem="E55-gY-sTj" secondAttribute="leadingMargin" id="dck-wb-eee"/>
-                            <constraint firstItem="oyi-fF-0R7" firstAttribute="trailing" secondItem="E55-gY-sTj" secondAttribute="trailingMargin" id="j70-fq-yz3"/>
-                            <constraint firstItem="oyi-fF-0R7" firstAttribute="top" secondItem="EpO-rS-52K" secondAttribute="bottom" constant="8" id="k5W-WF-15n"/>
-                            <constraint firstItem="EpO-rS-52K" firstAttribute="leading" secondItem="E55-gY-sTj" secondAttribute="leadingMargin" id="qLL-2U-XSt"/>
+                            <constraint firstAttribute="centerX" secondItem="228-4e-yY2" secondAttribute="centerX" constant="-0.5" id="JT9-MJ-sKT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="228-4e-yY2" secondAttribute="trailing" constant="111" id="lok-yR-wFy"/>
+                            <constraint firstAttribute="centerY" secondItem="228-4e-yY2" secondAttribute="centerY" constant="106" id="s3Q-58-6ko"/>
+                            <constraint firstItem="228-4e-yY2" firstAttribute="leading" secondItem="E55-gY-sTj" secondAttribute="leadingMargin" constant="112" id="xUd-IM-1ki"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="4uV-pb-3pI"/>
-                                <exclude reference="FPB-dZ-Uc6"/>
-                                <exclude reference="XVn-uX-49c"/>
+                                <exclude reference="lok-yR-wFy"/>
+                                <exclude reference="xUd-IM-1ki"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="userImageView" destination="EpO-rS-52K" id="eiN-Fg-uRE"/>
                         <outlet property="userNameLabel" destination="oyi-fF-0R7" id="dAE-3C-xY6"/>
                     </connections>
                 </viewController>
