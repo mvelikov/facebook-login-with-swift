@@ -14,6 +14,7 @@
 		96F3B2EE1A027D5A00FE8EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F3B2EC1A027D5A00FE8EF2 /* LaunchScreen.xib */; };
 		96F3B2FA1A027D5A00FE8EF2 /* Login_with_Swift_iOS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3B2F91A027D5A00FE8EF2 /* Login_with_Swift_iOS_AppTests.swift */; };
 		96F3B3041A027E0C00FE8EF2 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3B3031A027E0C00FE8EF2 /* FacebookSDK.framework */; };
+		96F3B3071A028DE700FE8EF2 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3B3061A028DE700FE8EF2 /* UserDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		96F3B2F91A027D5A00FE8EF2 /* Login_with_Swift_iOS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_with_Swift_iOS_AppTests.swift; sourceTree = "<group>"; };
 		96F3B3031A027E0C00FE8EF2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		96F3B3051A027E7B00FE8EF2 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
+		96F3B3061A028DE700FE8EF2 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				96F3B2EA1A027D5A00FE8EF2 /* Images.xcassets */,
 				96F3B2EC1A027D5A00FE8EF2 /* LaunchScreen.xib */,
 				96F3B2E11A027D5A00FE8EF2 /* Supporting Files */,
+				96F3B3061A028DE700FE8EF2 /* UserDetailsViewController.swift */,
 			);
 			path = "Login with Swift iOS App";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				96F3B2E61A027D5A00FE8EF2 /* ViewController.swift in Sources */,
 				96F3B2E41A027D5A00FE8EF2 /* AppDelegate.swift in Sources */,
+				96F3B3071A028DE700FE8EF2 /* UserDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +427,7 @@
 				96F3B2FF1A027D5B00FE8EF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96F3B3001A027D5B00FE8EF2 /* Build configuration list for PBXNativeTarget "Login with Swift iOS AppTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +436,7 @@
 				96F3B3021A027D5B00FE8EF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
