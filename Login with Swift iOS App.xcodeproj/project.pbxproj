@@ -13,6 +13,7 @@
 		96F3B2EB1A027D5A00FE8EF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F3B2EA1A027D5A00FE8EF2 /* Images.xcassets */; };
 		96F3B2EE1A027D5A00FE8EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F3B2EC1A027D5A00FE8EF2 /* LaunchScreen.xib */; };
 		96F3B2FA1A027D5A00FE8EF2 /* Login_with_Swift_iOS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3B2F91A027D5A00FE8EF2 /* Login_with_Swift_iOS_AppTests.swift */; };
+		96F3B3041A027E0C00FE8EF2 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3B3031A027E0C00FE8EF2 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		96F3B2F31A027D5A00FE8EF2 /* Login with Swift iOS AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Login with Swift iOS AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3B2F81A027D5A00FE8EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F3B2F91A027D5A00FE8EF2 /* Login_with_Swift_iOS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_with_Swift_iOS_AppTests.swift; sourceTree = "<group>"; };
+		96F3B3031A027E0C00FE8EF2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F3B3041A027E0C00FE8EF2 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +93,7 @@
 		96F3B2E11A027D5A00FE8EF2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96F3B3031A027E0C00FE8EF2 /* FacebookSDK.framework */,
 				96F3B2E21A027D5A00FE8EF2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -338,6 +342,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mihailvelikov/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Login with Swift iOS App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +356,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mihailvelikov/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Login with Swift iOS App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
