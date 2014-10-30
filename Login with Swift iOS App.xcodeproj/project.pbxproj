@@ -38,6 +38,7 @@
 		96F3B2F81A027D5A00FE8EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F3B2F91A027D5A00FE8EF2 /* Login_with_Swift_iOS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_with_Swift_iOS_AppTests.swift; sourceTree = "<group>"; };
 		96F3B3031A027E0C00FE8EF2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		96F3B3051A027E7B00FE8EF2 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +96,7 @@
 			children = (
 				96F3B3031A027E0C00FE8EF2 /* FacebookSDK.framework */,
 				96F3B2E21A027D5A00FE8EF2 /* Info.plist */,
+				96F3B3051A027E7B00FE8EF2 /* Bridge-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -349,6 +351,7 @@
 				INFOPLIST_FILE = "Login with Swift iOS App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Login with Swift iOS App/Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -363,6 +366,7 @@
 				INFOPLIST_FILE = "Login with Swift iOS App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Login with Swift iOS App/Bridge-Header.h";
 			};
 			name = Release;
 		};
