@@ -86,6 +86,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="userImageView" destination="EpO-rS-52K" id="eiN-Fg-uRE"/>
+                        <outlet property="userNameLabel" destination="oyi-fF-0R7" id="dAE-3C-xY6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I28-Xj-oZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
