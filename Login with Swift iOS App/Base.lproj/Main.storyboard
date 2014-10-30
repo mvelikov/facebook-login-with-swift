@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -33,10 +35,61 @@
                     </view>
                     <connections>
                         <outlet property="fbLoginView" destination="eHM-JE-6NJ" id="Be7-0e-5vr"/>
+                        <segue destination="70V-E7-P0J" kind="showDetail" identifier="showUserDetails" id="Bbe-3z-hRL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--User Details View Controller-->
+        <scene sceneID="RW3-QC-gHy">
+            <objects>
+                <viewController id="70V-E7-P0J" customClass="UserDetailsViewController" customModule="Login_with_Swift_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KEY-t5-M1h"/>
+                        <viewControllerLayoutGuide type="bottom" id="QaN-rD-z74"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E55-gY-sTj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EpO-rS-52K">
+                                <rect key="frame" x="16" y="28" width="568" height="379"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EpO-rS-52K" secondAttribute="height" multiplier="3:2" id="lqY-Yw-SDY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyi-fF-0R7">
+                                <rect key="frame" x="16" y="415" width="568" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="EpO-rS-52K" secondAttribute="centerX" id="4uV-pb-3pI"/>
+                            <constraint firstAttribute="centerY" secondItem="EpO-rS-52K" secondAttribute="centerY" constant="112" id="FPB-dZ-Uc6"/>
+                            <constraint firstItem="EpO-rS-52K" firstAttribute="top" secondItem="KEY-t5-M1h" secondAttribute="bottom" constant="8" id="JDP-9x-j2z"/>
+                            <constraint firstAttribute="centerX" secondItem="oyi-fF-0R7" secondAttribute="centerX" id="XVn-uX-49c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EpO-rS-52K" secondAttribute="trailing" id="aYX-ly-tOE"/>
+                            <constraint firstItem="oyi-fF-0R7" firstAttribute="leading" secondItem="E55-gY-sTj" secondAttribute="leadingMargin" id="dck-wb-eee"/>
+                            <constraint firstItem="oyi-fF-0R7" firstAttribute="trailing" secondItem="E55-gY-sTj" secondAttribute="trailingMargin" id="j70-fq-yz3"/>
+                            <constraint firstItem="oyi-fF-0R7" firstAttribute="top" secondItem="EpO-rS-52K" secondAttribute="bottom" constant="8" id="k5W-WF-15n"/>
+                            <constraint firstItem="EpO-rS-52K" firstAttribute="leading" secondItem="E55-gY-sTj" secondAttribute="leadingMargin" id="qLL-2U-XSt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4uV-pb-3pI"/>
+                                <exclude reference="FPB-dZ-Uc6"/>
+                                <exclude reference="XVn-uX-49c"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I28-Xj-oZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="228"/>
         </scene>
     </scenes>
 </document>

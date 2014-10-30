@@ -85,11 +85,11 @@
 			children = (
 				96F3B2E31A027D5A00FE8EF2 /* AppDelegate.swift */,
 				96F3B2E51A027D5A00FE8EF2 /* ViewController.swift */,
+				96F3B3061A028DE700FE8EF2 /* UserDetailsViewController.swift */,
 				96F3B2E71A027D5A00FE8EF2 /* Main.storyboard */,
 				96F3B2EA1A027D5A00FE8EF2 /* Images.xcassets */,
 				96F3B2EC1A027D5A00FE8EF2 /* LaunchScreen.xib */,
 				96F3B2E11A027D5A00FE8EF2 /* Supporting Files */,
-				96F3B3061A028DE700FE8EF2 /* UserDetailsViewController.swift */,
 			);
 			path = "Login with Swift iOS App";
 			sourceTree = "<group>";
