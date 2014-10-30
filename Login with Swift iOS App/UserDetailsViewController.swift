@@ -9,7 +9,13 @@
 import UIKit
 
 class UserDetailsViewController: UIViewController {
-
+    
+    var userId: String?
+    var userName: String?
+    
+    @IBOutlet var userImageView: UIImageView!
+    @IBOutlet var userNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
