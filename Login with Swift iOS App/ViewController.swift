@@ -51,6 +51,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
 
             let destinationController: UserDetailsViewController = segue.destinationViewController as UserDetailsViewController
             destinationController.userName = fbUser?.name
+            destinationController.userProfileId = fbUser?.objectID
         }
     }
 }

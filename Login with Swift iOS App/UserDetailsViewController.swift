@@ -11,13 +11,16 @@ import UIKit
 class UserDetailsViewController: UIViewController {
     
     var userName: String?
+    var userProfileId: String?
     
     @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet weak var userProfileImageView: FBProfilePictureView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userNameLabel.text = userName
+        userProfileImageView.profileID = userProfileId
     }
 
     override func didReceiveMemoryWarning() {
