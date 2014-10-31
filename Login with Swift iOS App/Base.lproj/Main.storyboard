@@ -110,6 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="userNameLabel" destination="oyi-fF-0R7" id="dAE-3C-xY6"/>
+                        <outlet property="userProfileImageView" destination="Ym9-Hq-q6H" id="ZZ5-ji-VxY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I28-Xj-oZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
