@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -52,17 +53,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="228-4e-yY2">
-                                <rect key="frame" x="235" y="144" width="131" height="100"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="228-4e-yY2">
+                                <rect key="frame" x="235" y="391" width="131" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyi-fF-0R7">
-                                        <rect key="frame" x="81" y="38" width="42" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLg-U8-AmQ">
+                                        <rect key="frame" x="20" y="40" width="44" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLg-U8-AmQ">
-                                        <rect key="frame" x="20" y="40" width="44" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyi-fF-0R7">
+                                        <rect key="frame" x="81" y="38" width="42" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -79,17 +80,30 @@
                                     <constraint firstItem="oyi-fF-0R7" firstAttribute="top" secondItem="228-4e-yY2" secondAttribute="top" constant="38" id="gcm-N0-PEk"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ym9-Hq-q6H" customClass="FBProfilePictureView">
+                                <rect key="frame" x="16" y="28" width="568" height="355"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ym9-Hq-q6H" secondAttribute="height" multiplier="16:10" id="hf3-GR-csJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="228-4e-yY2" secondAttribute="centerX" constant="-0.5" id="JT9-MJ-sKT"/>
+                            <constraint firstItem="Ym9-Hq-q6H" firstAttribute="trailing" secondItem="E55-gY-sTj" secondAttribute="trailingMargin" id="3Od-PX-prZ"/>
+                            <constraint firstItem="228-4e-yY2" firstAttribute="top" secondItem="Ym9-Hq-q6H" secondAttribute="bottom" constant="8" id="4zm-ly-Cgt"/>
+                            <constraint firstItem="Ym9-Hq-q6H" firstAttribute="leading" secondItem="E55-gY-sTj" secondAttribute="leadingMargin" id="ANs-78-SGG"/>
+                            <constraint firstAttribute="centerX" secondItem="228-4e-yY2" secondAttribute="centerX" id="JT9-MJ-sKT"/>
+                            <constraint firstAttribute="centerX" secondItem="Ym9-Hq-q6H" secondAttribute="centerX" id="R4J-hY-VXJ"/>
+                            <constraint firstItem="Ym9-Hq-q6H" firstAttribute="top" secondItem="KEY-t5-M1h" secondAttribute="bottom" constant="8" id="dB4-sw-y1e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="228-4e-yY2" secondAttribute="trailing" constant="111" id="lok-yR-wFy"/>
-                            <constraint firstAttribute="centerY" secondItem="228-4e-yY2" secondAttribute="centerY" constant="106" id="s3Q-58-6ko"/>
+                            <constraint firstAttribute="centerY" secondItem="228-4e-yY2" secondAttribute="centerY" constant="-100" id="s3Q-58-6ko"/>
                             <constraint firstItem="228-4e-yY2" firstAttribute="leading" secondItem="E55-gY-sTj" secondAttribute="leadingMargin" constant="112" id="xUd-IM-1ki"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="lok-yR-wFy"/>
+                                <exclude reference="s3Q-58-6ko"/>
                                 <exclude reference="xUd-IM-1ki"/>
                             </mask>
                         </variation>
@@ -100,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I28-Xj-oZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="228"/>
+            <point key="canvasLocation" x="1065" y="367"/>
         </scene>
     </scenes>
 </document>
