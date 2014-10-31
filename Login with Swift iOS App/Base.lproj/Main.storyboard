@@ -15,25 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-JE-6NJ" customClass="FBLoginView">
-                                <rect key="frame" x="150" y="532" width="300" height="48"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="FBT-Bi-tl6"/>
-                                    <constraint firstAttribute="height" constant="48" id="hBG-4s-xLN"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="eHM-JE-6NJ" secondAttribute="centerX" id="E33-2k-iGf"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eHM-JE-6NJ" secondAttribute="bottom" constant="20" id="GmG-ve-yxl"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="fbLoginView" destination="eHM-JE-6NJ" id="Be7-0e-5vr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
