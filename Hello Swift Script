@@ -1,0 +1,108 @@
+1. https://developers.facebook.com/quickstarts/?platform=ios
+
+2. Създаване на проект в XCode:
+    iOS -> Application -> Single View Application
+
+    Product Name: Facebook Login with Swift iOS Application
+    Language: Swift
+    Devices: Universal
+
+3. Добавяме FacebookSDK в проекта
+
+4. Създаваме Bridge-Header.h клас и импортираме FacebookSDK.h в проекта
+    #import <FacebookSDK/FacebookSDK.h>
+
+5. Описваме Facebook App детайлите в Info.plist
+
+6. Регистрираме Facebook класовете, които ползваме в AppDelegate
+
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+        FBLoginView.self
+        FBProfilePictureView.self
+        
+        return true
+    }
+
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString?, annotation: AnyObject) -> Bool {
+        
+        var wasHandled:Bool = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
+        return wasHandled
+    }
+
+7. Създаваме член променливи в класа ViewController
+
+    import UIKit
+
+    class ViewController: UIViewController, FBLoginViewDelegate {
+
+        var fbUser : FBGraphUser?
+        
+        @IBOutlet var fbLoginView : FBLoginView!
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+
+            self.fbLoginView.delegate = self
+            self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+        }
+    }
+
+8. Добавяме FBLoginViewDelegate методи
+
+    func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
+        println("User Logged In")
+    }
+    
+    func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
+        println("User Name: \(user.name)")
+        fbUser = user
+        performSegueWithIdentifier("showUserDetails", sender: fbLoginView)
+    }
+    
+    func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
+        println("User Logged Out")
+    }
+    
+    func loginView(loginView : FBLoginView!, handleError:NSError) {
+        println("Error: \(handleError.localizedDescription)")
+    }
+
+9. Създаваме клас UserDetailsViewController
+
+10. Добавяме userName и userProfileId член променливи към класа
+    import UIKit
+
+    class UserDetailsViewController: UIViewController {
+        
+        var userName: String?
+        var userProfileId: String?
+        
+        @IBOutlet var userNameLabel: UILabel!
+        @IBOutlet weak var userProfileImageView: FBProfilePictureView!
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+
+            userNameLabel.text = userName
+            userProfileImageView.profileID = userProfileId
+        }
+
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+    }
+
+11. Създаваме изгледите за двата контролера в Main.Storyboard
+
+12. Добавяме prepareForSegue метод в ViewController, с който изпращаме данни между двата контролера
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if sender as FBLoginView == fbLoginView {
+
+            let destinationController: UserDetailsViewController = segue.destinationViewController as UserDetailsViewController
+            destinationController.userName = fbUser?.name
+            destinationController.userProfileId = fbUser?.objectID
+        }
+    }
